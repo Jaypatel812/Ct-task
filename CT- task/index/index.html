@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="sidebar-wrapper">
+        <div class="sidebar-top-sec">
+            <div class="app-logo">
+                <img src="../Assets/tracking-logo.png">
+            </div>
+            <div class="sidebar-links">
+                <a href="#"><img src="../Assets/dashboard-on.svg" alt=""><span class="dboard">Dashboard</span></a>
+                <a href="#"><img src="../Assets/invoice-off.svg" alt="">Invoices</a>
+                <a href="#"><img src="../Assets/projects-off.svg" alt="">Proposals</a>
+                <a href="#"><img src="../Assets/services-off.svg" alt="">Services</a>
+                <a href="#"><img src="../Assets/transactions-off.svg" alt="">Transactions</a>
+                <a href="#"><img src="../Assets/projects-off.svg" alt="">Projects</a>
+                <a href="#"><img src="../Assets/customers.svg" alt="">Customers</a>
+
+            </div>
+        </div>
+        <div class="sidebar-bottom-sec">
+            <a href="#"><img src="../Assets/settings-off.svg" alt="">Setting</a>
+            <a href="#"><img src="../Assets/logout-off.svg" alt="">Log out</a>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <div class="dashboard-header-wrapper">
+            <div class="dashboard-header">
+                <p class="welcome-msg">
+                    Hi, Welcome back <span>Robert!</span>
+                </p>
+                <div class="search-avatar-wrapper">
+                    <label class="search-label">
+                        <img src="../assets/Icons/search.svg">
+                        <input placeholder="Search...">
+                    </label>
+                    <span>
+                        <img src="../Assets/Icons/notifications.svg">
+                        <span class="have-message"></span>
+                    </span>
+                    <img src="../Assets/Avatar01.png">
+                    <img class="threeDots" src="../Assets/Icons/more_vert.svg" onclick="opensidebar">
+                </div>
+            </div>
+            <div class="finance-overview">
+                <h2>Finance Overview</h2>
+                <div class="finance-grid">
+                    <div class="finance-wrapper">
+                        <p class="money">$2,77,120</p>
+                        <p class="finance-name">Sales</p>
+                        <img src="../Assets/sales-card-logo.png">
+                    </div>
+                    <div class="finance-wrapper">
+                        <p class="money">$60,100</p>
+                        <p class="finance-name">Expense</p>
+                        <img src="../Assets/Expense-card-logo.png">
+                    </div>
+                    <div class="finance-wrapper">
+                        <p class="money">$57,230</p>
+                        <p class="finance-name">Profit</p>
+                        <img src="../Assets/Profit-card-logo.png">
+                    </div>
+                    <div class="finance-wrapper">
+                        <p class="money">$1,60,124</p>
+                        <p class="finance-name">Income</p>
+                        <img src="../Assets/Income-card-logo.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="projects-table-wrapper">
+                <div class="proects-header-wrapper">
+                    <p class="project-header">Current Projects</p>
+
+                    <button type="button" class="btn add-btn btn-sm" data-toggle="modal"
+                        data-target="#myModal">Create</button>
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="project-form">
+                                        <div class="input-wrapper">
+                                            <label>Project Name</label>
+                                            <input type="text" placeholder="e.g. web project">
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label>Customer</label>
+                                            <input type="text" placeholder="e.g. john doe">
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label>Sent Date</label>
+                                            <input type="date">
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label>Amount ($)</label>
+                                            <input type="number" placeholder="000.00">
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label>Project Status</label>
+                                            <select>
+                                                <option value="sent">Sent</option>
+                                                <option value="draft">Draft</option>
+                                                <option value="rejected">Rejected</option>
+                                                <option value="paid">Paid</option>
+                                            </select>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn  add-btn" data-dismiss="modal">Add
+                                                project</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </form>
+        </div>
+
+
+        <div class="projects-table">
+            <div class="projects">
+                <div class="row-header">
+                    <span>Project Name</span>
+                    <span>Customer</span>
+                    <span>Sent Date</span>
+                    <span class="project-amount">Amount</span>
+                    <span class="projects-buttons"></span>
+                </div>
+                <div class="row">
+                    <span>Travel app Design</span>
+                    <span>Jacob Jones</span>
+                    <span>28 Oct 2022</span>
+                    <span class="project-amount">$240.9</span>
+                    <span class="projects-buttons">
+                        <button class="sent-btn">SENT</button>
+                    </span>
+                </div>
+
+                <div class="row">
+                    <span>UX Research for Event management app</span>
+                    <span>Wade Warren</span>
+                    <span>18 Oct 2022</span>
+                    <span class="project-amount">$120.0</span>
+                    <span class="projects-buttons">
+                        <button class="draft-btn">DRAFT</button>
+                    </span>
+                </div>
+                <div class="row">
+                    <span>Redesign - Food delivery app</span>
+                    <span>Annette Black</span>
+                    <span>15 Oct 2022</span>
+                    <span class="project-amount">$351.0</span>
+                    <span class="projects-buttons">
+                        <button class="paid-btn">PAID</button>
+                    </span>
+                </div>
+                <div class="row">
+                    <span>Web App - Online Learning</span>
+                    <span>Cameron Williamson</span>
+                    <span>15 Oct 2022</span>
+                    <span class="project-amount">$240.0</span>
+                    <span class="projects-buttons">
+                        <button class="paid-btn">PAID</button>
+                    </span>
+                </div>
+                <div class="row">
+                    <span>Railway web casestudy</span>
+                    <span>Robert Fox</span>
+                    <span>13 Oct 2022</span>
+                    <span class="project-amount">$120.0</span>
+                    <span class="projects-buttons">
+                        <button class="sent-btn">SENT</button>
+                    </span>
+                </div>
+                <div class="row">
+                    <span>Responsive web design</span>
+                    <span>Floyd Miles</span>
+                    <span>06 Oct 2022</span>
+                    <span class="project-amount">$120.0</span>
+                    <span class="projects-buttons">
+                        <button class="rejected-btn">REJECTED</button>
+                    </span>
+                </div>
+                <div class="row">
+                    <span>Music app design</span>
+                    <span>Theresa Webb</span>
+                    <span>04 Oct 2022</span>
+                    <span class="project-amount">$120.0</span>
+                    <span class="projects-buttons">
+                        <button class="draft-btn">DRAFT</button>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="events-wrapper">
+            <p>Events</p>
+            <div class="event-list">
+                <div class="event">
+                    <div class="event-data">
+                        <img src="../Assets/Avatar01.png">
+                        <div>
+                            <p class="event-employee_name">Wade Warren</p>
+                            <p class="event-name">
+                                🎂 <span class="tag">Birthday</span> .
+                                <span class="time">Today</span>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="event-button">Wish</button>
+                </div>
+
+                <div class="event">
+                    <div class="event-data">
+                        <img src="../Assets/Avatar02.png">
+                        <div>
+                            <p class="event-employee_name">Wade Warren</p>
+                            <p class="event-name">
+                                🎉 <span class="tag">Joining Us</span> .
+                                <span class="time">Today</span>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="event-button">Congratulations</button>
+                </div>
+
+                <div class="event">
+                    <div class="event-data">
+                        <img src="../Assets/Avatar01.png">
+                        <div>
+                            <p class="event-employee_name">Wade Warren</p>
+                            <p class="event-name">
+                                💼 <span>Work Anniversary</span> .<span>10 Sept, 2022</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-data">
+                        <img src="../Assets/Avatar03.png">
+                        <div>
+                            <p class="event-employee_name">Wade Warren</p>
+                            <p class="event-name">
+                                💼 <span>Work Anniversary</span> .<span>20 Sept, 2022</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-data">
+                        <img src="../Assets/Avatar04.png">
+                        <div>
+                            <p class="event-employee_name">Wade Warren</p>
+                            <p class="event-name">
+                                💼 <span>Work Anniversary</span> .<span>16 Sept, 2022</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="sdj.js"></script>
+
+</body>
+
+</html>
